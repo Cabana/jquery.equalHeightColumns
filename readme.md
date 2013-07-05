@@ -7,7 +7,7 @@ Make columns equal height using a little jQuery.
 ```javascript
 $(window).on('load resize', function() {
 
-  $('.row').equalHeight({
+  $('.row').equalHeightColumns({
     // options
   });
 

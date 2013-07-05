@@ -1,6 +1,6 @@
 ;(function ( $, window, document, undefined ) {
 
-  var pluginName = "equalHeight",
+  var pluginName = "equalHeightColumns",
   defaults = {
     columnsSelector: '.columns',
     breakPoint: 767
