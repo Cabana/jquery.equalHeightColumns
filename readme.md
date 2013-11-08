@@ -2,20 +2,30 @@
 
 Make columns equal height using a little jQuery.
 
-# How to use it
+## Dependencies
+
+* jQuery library
+* jQuery UI Core library
+* Zurb Foundation CSS library
+
+# Usage
 
 ```javascript
 $(window).on('load resize', function() {
 
-  $('.row').equalHeightColumns({
-    // options
-  });
+  $('.row').equalHeightColumns();
 
 });
 ```
 
 ## Options
 
-`columnsSelector: <string>`, a css selector matching the columns you wanna make equal height. Default is `.columns`.
+```javascript
+$('.last-viewed-pages').lastViewedPages({
 
-`breakPoint: <integer>`, the width of the browser at which point the height is set to `auto`. For mobile. Default is `767`.
+  columnsSelector: [string], // a css selector matching the columns you wanna make equal height. Default is `.columns`.
+
+  breakPoint: [integer] // the width of the browser at which point the height is set to `auto`. For mobile. Default is `767`.
+
+});
+```
