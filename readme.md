@@ -36,3 +36,7 @@ All options can also be set via `data-` attributes on the element. They will ove
 
 - `data-equal-height-breakpoint`
 - `data-equal-height-column-selector`
+
+## Methods
+
+- `option` Sets an option associated with the specified `optionName`. Options can be changed on the fly after the plugin has been initialized.

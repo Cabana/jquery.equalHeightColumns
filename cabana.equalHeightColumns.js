@@ -13,16 +13,7 @@
       _this._applyDataParams();
 
       $(window).on('load resize', function() {
-        _this._resetHeight();
-        var maxHeight = _this._maxHeight();
-
-        if ( $(window).width() > _this.options.breakpoint ) {
-          $(_this.element).find(_this.options.columnsSelector).height(maxHeight);
-
-        } else {
-
-          _this._resetHeight();
-        }
+        _this._render();
       });
     },
 
@@ -51,11 +42,29 @@
       $(this.element).find(this.options.columnsSelector).height('auto');
     },
 
+    _render: function() {
+      var maxHeight = this._maxHeight();
+
+      if ( $(window).width() > this.options.breakpoint ) {
+        $(this.element).find(this.options.columnsSelector).height(maxHeight);
+      } else {
+        this._resetHeight();
+      }
+    },
+
     _destroy: function () {
       $(this.element).find(this.options.columnsSelector).each(function(){
         console.log("value");
         $(this).css('');
       });
+    },
+
+    _setOption: function (key, value) {
+      this.options[ key ] = value;
+
+      this._super( "_setOption", key, value );
+
+      this._render();
     }
 
   });
