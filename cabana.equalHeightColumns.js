@@ -27,7 +27,13 @@
     },
 
     _applyDataParams: function() {
-      this.options.breakpoint = ($.type(this.element.data('equal-height-breakpoint')) === 'undefined') ? this.options.breakpoint : this.element.data('equal-height-breakpoint');
+      this._applyDataParam('breakpoint', 'equal-height-breakpoint');
+    },
+
+    _applyDataParam: function(optionToSet, dataParam) {
+      if ($(this.element).data(dataParam)) {
+        this.options[optionToSet] = $(this.element).data(dataParam);
+      }
     },
 
     _maxHeight: function() {
