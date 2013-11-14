@@ -10,7 +10,7 @@
     _create: function () {
       var _this = this;
 
-      _this.options.breakpoint = ($.type(_this.element.data('equal-height-breakpoint')) === 'undefined') ? _this.options.breakpoint : _this.element.data('equal-height-breakpoint');
+      _this._applyDataParams();
 
       $(window).on('load resize', function() {
         _this._resetHeight();
@@ -24,6 +24,10 @@
           _this._resetHeight();
         }
       });
+    },
+
+    _applyDataParams: function() {
+      this.options.breakpoint = ($.type(this.element.data('equal-height-breakpoint')) === 'undefined') ? this.options.breakpoint : this.element.data('equal-height-breakpoint');
     },
 
     _maxHeight: function() {
