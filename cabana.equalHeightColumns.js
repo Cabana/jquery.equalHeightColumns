@@ -56,9 +56,6 @@
         console.log("value");
         $(this).css('');
       });
-    },
-
-    _render: function () {
     }
 
   });
