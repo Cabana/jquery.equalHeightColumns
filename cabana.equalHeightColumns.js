@@ -12,8 +12,6 @@
 
       _this.options.breakpoint = ($.type(_this.element.data('equal-height-breakpoint')) === 'undefined') ? _this.options.breakpoint : _this.element.data('equal-height-breakpoint');
 
-      console.log(_this.options.breakpoint);
-
       $(window).on('load resize', function() {
         _this._resetHeight();
         var maxHeight = _this._maxHeight();
