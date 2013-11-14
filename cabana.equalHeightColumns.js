@@ -54,8 +54,8 @@
 
     _destroy: function () {
       $(this.element).find(this.options.columnsSelector).each(function(){
-        console.log("value");
-        $(this).css('');
+        $(this).attr('style', '');
+        $(window).off('load resize');
       });
     },
 

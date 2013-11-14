@@ -40,3 +40,4 @@ All options can also be set via `data-` attributes on the element. They will ove
 ## Methods
 
 - `option` Sets an option associated with the specified `optionName`. Options can be changed on the fly after the plugin has been initialized.
+- `destroy` Remove the style attribute on the columns and remove the event handlers attatched to `window`.
