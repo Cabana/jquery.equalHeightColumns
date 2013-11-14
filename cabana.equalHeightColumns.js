@@ -28,6 +28,7 @@
 
     _applyDataParams: function() {
       this._applyDataParam('breakpoint', 'equal-height-breakpoint');
+      this._applyDataParam('columnsSelector', 'equal-height-column-selector');
     },
 
     _applyDataParam: function(optionToSet, dataParam) {
