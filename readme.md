@@ -29,3 +29,7 @@ $('.last-viewed-pages').lastViewedPages({
 
 });
 ```
+
+## Data params
+
+- `equal-height-breakpoint` Where the breakpoint should be.
