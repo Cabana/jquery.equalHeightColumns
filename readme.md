@@ -34,5 +34,5 @@ $('.last-viewed-pages').lastViewedPages({
 
 All options can also be set via `data-` attributes on the element. They will override any options set with initializing the plugin.
 
-- `equal-height-breakpoint` Where the breakpoint should be.
-- `equal-height-column-selector` A CSS selector matching the columns you wanna make equal height.
+- `data-equal-height-breakpoint`
+- `data-equal-height-column-selector`
