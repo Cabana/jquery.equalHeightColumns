@@ -4,17 +4,21 @@
 
     options: {
       columnsSelector: '.columns',
-      breakPoint: 767
+      breakpoint: 767
     },
 
     _create: function () {
       var _this = this;
 
+      _this.options.breakpoint = ($.type(_this.element.data('equal-height-breakpoint')) === 'undefined') ? _this.options.breakpoint : _this.element.data('equal-height-breakpoint');
+
+      console.log(_this.options.breakpoint);
+
       $(window).on('load resize', function() {
         _this._resetHeight();
         var maxHeight = _this._maxHeight();
 
-        if ( $(window).width() > _this.options.breakPoint ) {
+        if ( $(window).width() > _this.options.breakpoint ) {
           $(_this.element).find(_this.options.columnsSelector).height(maxHeight);
 
         } else {
